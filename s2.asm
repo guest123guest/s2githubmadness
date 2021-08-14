@@ -33217,8 +33217,8 @@ Obj01_Init:
 	move.b	#2,priority(a0)
 	move.b	#$18,width_pixels(a0)
 	move.b	#4,render_flags(a0)
-	move.w	#$600,(Sonic_top_speed).w	; set Sonic's top speed
-	move.w	#$C,(Sonic_acceleration).w	; set Sonic's acceleration
+	move.w	#$FFF,(Sonic_top_speed).w	; set Sonic's top speed
+	move.w	#$F,(Sonic_acceleration).w	; set Sonic's acceleration
 	move.w	#$80,(Sonic_deceleration).w	; set Sonic's deceleration
 	tst.b	(Last_star_pole_hit).w
 	bne.s	Obj01_Init_Continued
@@ -34595,15 +34595,15 @@ Sonic_UpdateSpindash:
 ; ===========================================================================
 ; word_1AD0C:
 SpindashSpeeds:
-	dc.w  $800	; 0
-	dc.w  $880	; 1
-	dc.w  $900	; 2
-	dc.w  $980	; 3
-	dc.w  $A00	; 4
-	dc.w  $A80	; 5
-	dc.w  $B00	; 6
-	dc.w  $B80	; 7
-	dc.w  $C00	; 8
+	dc.w  $B00	; 0
+	dc.w  $BBB	; 1
+	dc.w  $C00	; 2
+	dc.w  $CCC	; 3
+	dc.w  $D00	; 4
+	dc.w  $DDD	; 5
+	dc.w  $E00	; 6
+	dc.w  $EEE	; 7
+	dc.w  $FFF	; 8
 ; word_1AD1E:
 SpindashSpeedsSuper:
 	dc.w  $B00	; 0
